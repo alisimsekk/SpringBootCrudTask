@@ -27,8 +27,8 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public Product update(Product product){
-        Product updatedProduct = productRepository.findById(product.getId()).get();
+    public Product update(int productId, Product product){
+        Product updatedProduct = productRepository.findById(productId).get();
         updatedProduct.setCategory(product.getCategory());
         updatedProduct.setName(product.getName());
         updatedProduct.setColor(product.getColor());

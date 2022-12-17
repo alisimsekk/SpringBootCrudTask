@@ -23,8 +23,8 @@ public class CategoryController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteCategoryById (@PathVariable("id") int categoryId){
-        String answer = categoryService.deleteCategoryById(categoryId);
+    public ResponseEntity<String> deleteCategoryById (@PathVariable("id") int id){
+        String answer = categoryService.deleteCategoryById(id);
         return new ResponseEntity<String>(answer, HttpStatus.ACCEPTED);
     }
 
@@ -35,13 +35,13 @@ public class CategoryController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Category> update(@PathVariable ("id") int categoryId, @RequestBody Category category){
-        return new ResponseEntity<Category>(categoryService.update(categoryId,category), HttpStatus.OK);
+    public ResponseEntity<Category> update(@PathVariable ("id") int id, @RequestBody Category category){
+        return new ResponseEntity<Category>(categoryService.update(id,category), HttpStatus.OK);
     }
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<Category> getCategoryById(@PathVariable("id") int categoryId){
-        Category categoryById = categoryService.getCategoryById(categoryId);
+    public ResponseEntity<Category> getCategoryById(@PathVariable("id") int id){
+        Category categoryById = categoryService.getCategoryById(id);
         return new ResponseEntity<Category>(categoryById , HttpStatus.OK);
     }
 }
