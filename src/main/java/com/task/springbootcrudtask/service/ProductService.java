@@ -20,7 +20,7 @@ public class ProductService {
 
     public String deleteProductById(int productId){
             productRepository.deleteById(productId);
-            return "Category deleted : " + productId;
+            return "Product deleted : id= " + productId;
     }
 
     public List<Product> findAllProduct(){
