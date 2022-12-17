@@ -28,9 +28,12 @@ public class CategoryService {
         if (!productListByCategoryId.isEmpty()){
             return "This category contains products, can not deleted";
         }
+        else if (categoryRepository.findById(categoryId).isEmpty()){
+            return "Category can not find";
+        }
         else{
             categoryRepository.deleteById(categoryId);
-            return "Category deleted : " + categoryId;
+            return "Category deleted : id= " + categoryId;
         }
     }
 
@@ -38,8 +41,9 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
-    public Category update(Category category){
-        Category updatedCategory = categoryRepository.findById(category.getId()).get();
+
+    public Category update(int categoryId, Category category){
+        Category updatedCategory = categoryRepository.findById(categoryId).get();
         updatedCategory.setName(category.getName());
         return categoryRepository.save(updatedCategory);
     }
