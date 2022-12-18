@@ -13,15 +13,15 @@ Controller kısmında gelen requestlere göre ilgili service üzerinden entityle
 
 Postman kullanılarak tablolara veri girişi yapılmış ve tablolardaki verilerin okunması, güncellenmesi, silinmesi işlemleri yapılabildiği görülmüştür.
 
-|METOD	| BAĞLANTI	                       | İŞLEM DETAYI                             |  
-|-------|---------------------------------|------------------------------------------|
-|POST	| /api/category/save	             | Kategori oluşturma endpoint’i            |
-|DELETE	| /api/category/delete/{{id}}	    | Kategori silme endpoint’i                |
-|GET	| /api/category/all	              | Tüm kategorileri listeleme endpoint’i    |
-|GET	| /api/category/get/{{id}}	       | Id’ye göre kategori listeleme endpoint’i |
-|PUT	| /api/category/update/{{id}}	    | Kategori güncelleme endpoint’i           |
-|POST	| /api/product/save	              | Ürün oluşturma endpoint’i                |
-|DELETE	| /api/v1/ product/delete/{{id}}	 | Ürün silme endpoint’i                    |
-|GET	| /api/ product/all	              | Tüm ürünleri listeleme endpoint’i        |
-|GET	| /api/product/get/{{id}}	        | Id’ye göre ürün listeleme endpoint’i                              |
-|PUT	| /api/product/update/{{id}}	     | Ürün güncelleme endpoint’i      |
+|METOD	| BAĞLANTI	                   | İŞLEM DETAYI                             |  
+|-------|-----------------------------|------------------------------------------|
+|POST	| /api/category/save	         | Kategori oluşturma endpoint’i            |
+|DELETE	| /api/category/delete/{{id}}	 | Kategori silme endpoint’i                |
+|GET	| /api/category/all	          | Tüm kategorileri listeleme endpoint’i    |
+|GET	| /api/category/get/{{id}}	   | Id’ye göre kategori listeleme endpoint’i |
+|PUT	| /api/category/update/{{id}}	 | Kategori güncelleme endpoint’i           |
+|POST	| /api/product/save	          | Ürün oluşturma endpoint’i                |
+|DELETE	| /api/product/delete/{{id}}	 | Ürün silme endpoint’i                    |
+|GET	| /api/ product/all	          | Tüm ürünleri listeleme endpoint’i        |
+|GET	| /api/product/get/{{id}}	    | Id’ye göre ürün listeleme endpoint’i                              |
+|PUT	| /api/product/update/{{id}}	 | Ürün güncelleme endpoint’i      |
